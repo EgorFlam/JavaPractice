@@ -1,0 +1,28 @@
+public class ExampleStringChart{
+    public static void main(String[] args) {
+        /*
+        метод объекта String charAt(int index)
+        получаем символ строки по индексу
+        индекс в строке начинается с 0, то есть если строка длиной 5 символов, то последний индекс 4
+        */
+        // строка для работы
+        String string = "Modification";
+
+        //получаем и распечатываем символ под индексом 0, это символ М
+        // Всё просто! Для понимания М - это индекс 0, o-1, d-2, i-3, f-4, i-5, c-6, a-7, t-8, i-9, o-10, n-11.
+        Character character = string.charAt(0); //По данному типу выведится значение "M"
+        System.out.println(character);
+
+        //получим и распечатаем значение под индексом 8, это символ t
+        //в качестве значения индекса можно использовать переменную типа int
+        int index = 8;
+        character = string.charAt(index);
+        System.out.println(character);
+
+        //если вы пытаетесь получить символ по индекс
+        //который выходит за пределы максимального индекса (длина строки - 1) или меньше 0,
+        //то вы получите ошибку StringIndexOutOfBoundsException
+
+        //character = string.charAt(100);
+    }
+}

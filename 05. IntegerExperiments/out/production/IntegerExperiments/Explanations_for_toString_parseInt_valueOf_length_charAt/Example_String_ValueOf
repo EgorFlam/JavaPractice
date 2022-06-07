@@ -1,0 +1,28 @@
+public class ExampleStringValueOf {
+    public static void main(String[] args) {
+        /*
+        метод valueOf() преобразует любой объект в объект типа String
+        метод похож на toString(), только в этом случае мы передаем объект в аргумент метода, а
+        не вызываем метод у объекта
+         */
+
+        //создадим новый объект типа Integer и выведем содиржимое и тип переменной
+        Integer integer = 12345;
+        System.out.printf("значение %s - %s%n", integer, integer.getClass());
+
+        //преобразуем Date в String, будет вывод в читаемом формате
+        //так как в классе Date, метод String() переопределен для вывода "понятной" даты
+        Date date = Calendar.getInstance().getTime();
+        String dateString = String.valueOf(date);
+        System.out.printf("значение %s - $s%n", dateString, dateString.getClass());
+
+        //особенность метода, если объект не иницилизирован, то результат преобразования будет
+        //строка null, по факту у объекта вызывается метод String, поэтому вывод в обоих
+        //случиях "null"
+        Object object = null;
+        String objectString = String.valueOf(object);
+
+        System.out.println(objectString);
+        System.out.println(object);
+    }
+}
