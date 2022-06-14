@@ -10,7 +10,7 @@ public class Main
 
         System.out.println(container.count);
 
-        System.out.println(container.sumDigits(12));
+        System.out.println(container.sumDigits(123));
     }
 
 

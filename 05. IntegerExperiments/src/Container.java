@@ -12,8 +12,9 @@ public class Container
      если формат строки невозможно интерпретировать как число - получим ошибку (java.lang.NumberFormatException)
      */
         //@TODO: write code here
-        String s = Integer.toString(number);
-        Integer sum = number;
+        String s = number.toString(); //преоброзование числовое значение в строковое значение
+        Integer sum = 0; //задаем точку (индекс) отсчета для строки с начала, то есть вводим 0, так как в JAVA отсчет
+                        //ничанется с 0.
         for (int i = 0; i < s.length(); i++) {
             sum += Integer.parseInt(String.valueOf(s.charAt(i)));
         }
