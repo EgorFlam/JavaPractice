@@ -26,9 +26,6 @@ public class StringExpirients_Part_3 {
                         if (digits.charAt(0) == '8') {
                             digits = '7' + digits.substring(1);
                         }
-                        if (digits.charAt(0) == '9') {
-                            digits = '7' + digits.substring(1);
-                        }
                        System.out.println(digits);
                     } else {
                         System.out.println("Ooops. Please try again... :-)");
