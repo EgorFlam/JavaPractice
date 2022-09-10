@@ -17,16 +17,23 @@ public class StringExpirients_Part_3 {
                 String digits = input.replaceAll("[^0-9]", ""); //приведем номер телефона к нужному формату.
                 // В квадратных скобках [] указываем диапазон символов от 0 до 9. Знак ^ - это символ отрицания. То есть выражение в квадратных
                 // скобках ^0-9 звучит так: ВСЕ СИМВОЛЫ КРОМЕ ОТ 0 ДО 9 заменится на параметр, который указан в коде (replacement).
-                while (digits.length() <= 11)
-                {
-                    if (digits.length() >= 12 && digits.length() <= 9) ;
+                if (digits.length() == 10 && (digits.charAt(0) == '9')) {
+                    digits = '7' + digits.substring(0);
+                }
+
+                if (digits.length() == 11 && (digits.charAt(0) == '7' || digits.charAt(0) == '8'))
                     {
-                       System.out.println("system error");
+                        if (digits.charAt(0) == '8') {
+                            digits = '7' + digits.substring(1);
+                        }
+                        if (digits.charAt(0) == '9') {
+                            digits = '7' + digits.substring(1);
+                        }
+                       System.out.println(digits);
                     } else {
-                    System.out.println(digits);
+                        System.out.println("Ooops. Please try again... :-)");
+                    }
                 }
-                }
-            }
         }
     }
 }
