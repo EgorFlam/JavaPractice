@@ -17,14 +17,15 @@ public class StringExpirients_Part_3 {
                 String digits = input.replaceAll("[^0-9]", ""); //приведем номер телефона к нужному формату.
                 // В квадратных скобках [] указываем диапазон символов от 0 до 9. Знак ^ - это символ отрицания. То есть выражение в квадратных
                 // скобках ^0-9 звучит так: ВСЕ СИМВОЛЫ КРОМЕ ОТ 0 ДО 9 заменится на параметр, который указан в коде (replacement).
-                if (digits.length() == 10 && (digits.charAt(0) == '9')) {
-                    digits = '7' + digits.substring(0);
+                if (digits.length() == 10 && (digits.charAt(0) == '9')) { //задаем условия для 10-значного тел.номера, начинающегося с 9,
+                    // чтобы потом преобразовать номер в 11-значный номер, котрый будет начинаться с 7.
+                    digits = '7' + digits.substring(0);//фортматируем номер из 10 в 11-значный, путем добаления 7.
                 }
 
-                if (digits.length() == 11 && (digits.charAt(0) == '7' || digits.charAt(0) == '8'))
+                if (digits.length() == 11 && (digits.charAt(0) == '7' || digits.charAt(0) == '8'))// условие проверки, если номер 11-значный
                     {
                         if (digits.charAt(0) == '8') {
-                            digits = '7' + digits.substring(1);
+                            digits = '7' + digits.substring(1);//форматирование номера формату мобильных номеров России.
                         }
                        System.out.println(digits);
                     } else {
