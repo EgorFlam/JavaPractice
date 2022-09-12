@@ -35,7 +35,7 @@ public class StringExpirients_Part_3 {
              * Задаем условия для 10-значного тел.номера, начинающегося с 9, чтобы потом преобразовать номер в
              * 11-значный номер, котрый будет начинаться с 7.
              */
-            if (digits.length() == 10 && (digits.startsWith("9")) {
+            if (digits.length() == 10 && (digits.startsWith("9"))) {
                 System.out.println('7' + digits);
                 continue;
             }
