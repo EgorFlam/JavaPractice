@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ExampleStringTrim {
     public static void main(String[] args) {
-        /*
+        /**
         метод класса String
         trim()
         метод возвращает копию данной строки, в которой удаляются начальные и конечные пробелы,
